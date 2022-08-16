@@ -14,11 +14,11 @@ body {
   color: black;
   font-weight: 500;
   font-family: "Poppins";
-  overflow: hidden;
 }
 
 .container {
   margin: 12px;
+  height: 100%;
 }
 /* UNIVERSAL STYLE END */
 
@@ -113,7 +113,7 @@ nav ul li a {
 
 /* PROJECT STYLE START */
 .project-list {
-    margin-top: 25px;
+    margin: 12px 0 35px 0;
 }
 
 .project-list ul {
@@ -153,10 +153,9 @@ nav ul li a {
 
 /* FOOTER STYLE START */
 footer p {
-    font-size: 0.65rem;
+    font-size: 0.62rem;
     font-weight: 300;
-    position: fixed;
-    bottom: 0;
-    left: 25%;
+    text-align: center;
+    padding: 3px 0;
 }
 /* FOOTER STYLE END */
