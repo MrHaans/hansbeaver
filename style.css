@@ -113,7 +113,7 @@ nav ul li a {
 
 /* PROJECT STYLE START */
 .project-list {
-    margin: 25px 0;
+    margin-top: 25px;
 }
 
 .project-list ul {
@@ -155,6 +155,8 @@ nav ul li a {
 footer p {
     font-size: 0.65rem;
     font-weight: 300;
-    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 25%;
 }
 /* FOOTER STYLE END */
