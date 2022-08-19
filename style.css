@@ -5,16 +5,16 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* border: 1px red solid; */
 }
 
 body {
-  height: 100vh;
-  width: 100wv;
+  height: 100%;
+  width: 100vw;
   background-color: white;
   color: black;
   font-weight: 500;
   font-family: "Poppins";
-  overflow: hidden;
 }
 
 .container {
@@ -41,9 +41,17 @@ header h1 {
   font-size: 1.65rem;
   font-weight: 700;
   text-transform: uppercase;
+  word-spacing: -3px;
 }
 
-.hide {
+.block-title {
+  background-color: black;
+  color: white;
+  padding: 0 4px;
+  border-bottom-right-radius: 15px;
+}
+
+.emailme-header {
   display: none;
 }
 
@@ -58,7 +66,6 @@ nav ul {
 nav ul li a {
   display: inline-block;
   text-align: center;
-  width: 100%;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: capitalize;
@@ -72,7 +79,7 @@ nav ul li a {
 
 .profile,
 .project {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .profile > h1,
@@ -82,81 +89,330 @@ nav ul li a {
   text-transform: capitalize;
 }
 
-.profile > p {
-    font-size: 0.85rem;
-    font-weight: 400;
-    letter-spacing: 1.1px;
-    line-height: 20px;
+.profile > p,
+.findme {
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 1.1px;
+  line-height: 20px;
+}
+
+.findme {
+  font-weight: 500;
 }
 
 .social-media {
-    margin-top: 6px;
+  margin-top: 6px;
 }
 
 .social-media img {
-    height: 28px;
-    width: auto;
+  height: 28px;
+  width: auto;
 }
 
 .social-media > ul {
-    list-style: none;
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 4px;
-    height: 40px;
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 4px;
+  height: 40px;
 }
 
 .social-media ul li a {
-    display: inline-block;
-    padding: 3px;
-    height: 100%;
+  display: inline-block;
+  padding: 3px;
+  height: 100%;
+}
+
+.choice {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  margin-left: 5px;
+  align-self: center;
+  font-weight: 500;
+}
+
+.emailme-hero {
+  align-self: center;
+  margin-left: 5px;
+  margin-bottom: 4px;
+}
+
+.emailme-hero a {
+  width: 90px;
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.82rem;
+  border: 2px black solid;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.emailme-hero a:hover {
+  background-color: black;
+  color: white;
 }
 
 /* PROJECT STYLE START */
 .project-list {
-    margin: 12px 0 50px 0;
+  margin: 12px 0 50px 0;
 }
 
 .project-list ul {
-    list-style: none;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 12px;
+  list-style: none;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 12px;
 }
 
 .project-list ul li a {
-    text-decoration: none;
-    color: red;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
+  text-decoration: none;
+  color: red;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .project-list ul li a:hover {
-    color: black;
+  color: black;
 }
 
 .project-list ul li a::before {
-    content: "..";
-    margin: 3px;
-    border-radius: 20px;
-    background-color: black;
-    color: black;
+  content: "..";
+  margin: 3px;
+  border-radius: 20px;
+  background-color: black;
+  color: black;
 }
 
 .project-list ul li p {
-    font-size: 0.7rem;
-    font-weight: 300;
-    margin: 8px 0 0 25px;
+  font-size: 0.7rem;
+  font-weight: 300;
+  margin: 8px 0 0 25px;
+}
+
+.pagination {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.65rem;
+  font-weight: 500;
+  margin-left: 25px;
+  margin-top: 15px;
+  height: 22px;
+}
+
+.pagination a {
+  border: 1px black solid;
+  border-radius: 20px;
+  width: 22px;  
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  height: 100%;
+  padding: 3px;
+}
+
+.pagination a:hover {
+  background-color: black;
+  color: white;
 }
 /* PROJECT STYLE END */
 /* CONTETN STYLE END */
 
 /* FOOTER STYLE START */
 footer p {
-    font-size: 0.62rem;
-    font-weight: 300;
-    text-align: center;
-    padding: 3px 0;
+  font-size: 0.62rem;
+  font-weight: 300;
+  text-align: center;
+  padding: 3px 0;
 }
 /* FOOTER STYLE END */
+
+/* MEDIA QUERY */
+@media (min-width: 480px) {
+  .container {
+    margin: 12px 25px;
+  }
+
+  nav ul {
+    width: 150px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .choice {
+    display: none;
+  }
+
+  .emailme-hero {
+    display: none;
+  }
+
+  .emailme-header {
+    display: inline-block;
+  }
+
+  .emailme-header a {
+    padding: 3px 10px;
+    border: 3px black solid;
+    border-radius: 20px;
+  }
+
+  .emailme-header a:hover {
+    background-color: black;
+    color: white;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    width: 250px;
+  }
+}
+
+@media (min-width: 740px) {
+  .container {
+    margin: 12px 50px;
+  }
+
+  nav ul {
+    width: 150px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .emailme-header {
+    display: inline-block;
+  }
+
+  .emailme-header a {
+    padding: 4px 8px;
+    border: 3px black solid;
+    border-radius: 20px;
+  }
+
+  .emailme-header a:hover {
+    background-color: black;
+    color: white;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    width: 250px;
+  }
+
+  .profile h1,
+  .project h1 {
+    font-size: 1.6rem;
+  }
+
+  .profile h1 {
+    margin: 30px 0 12px 0;
+  }
+
+  .profile p {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    width: 520px;
+  }
+
+  .social-media img {
+    height: 32px;
+  }
+
+  .project-list ul li a {
+    font-size: 1.2rem;
+  }
+
+  .project-list ul li p {
+    font-size: 0.8rem;
+  }
+
+  footer p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    margin: 12px 180px;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+    width: 400px;
+  }
+
+  .emailme-header a {
+    padding: 4px 8px;
+    border: 3px black solid;
+    border-radius: 20px;
+  }
+
+  .emailme-header a:hover {
+    background-color: black;
+    color: white;
+  }
+
+  nav ul {
+    width: 150px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .profile h1,
+  .project h1 {
+    font-size: 1.8rem;
+  }
+
+  .profile p {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    width: 520px;
+  }
+
+  .social-media ul {
+    height: 50px;
+  }
+
+  .social-media ul li a {
+    height: 100%;
+  }
+
+  .social-media img {
+    height: 40px;
+  }
+
+  .project-list ul li a {
+    font-size: 1.3rem;
+  }
+
+  .project-list ul li p {
+    font-size: 0.95rem;
+  }
+
+  .pagination {
+    font-size: 0.75rem;
+    height: 25px;
+  }
+  
+  .pagination a {
+    width: 25px;  
+    height: 100%;
+  }
+
+  footer p {
+    font-size: 0.72rem;
+  }
+}
