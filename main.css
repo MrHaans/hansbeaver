@@ -14,8 +14,6 @@ body {
   color: #7fcd91;
   font-weight: 500;
   font-family: "Poppins";
-  position: relative;
-  overflow: hidden;
 }
 
 .container {
@@ -229,13 +227,6 @@ nav ul li a {
 /* CONTETN STYLE END */
 
 /* FOOTER STYLE START */
-footer {
-  position: absolute;
-  bottom: 3%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 footer p {
   font-size: 0.62rem;
   font-weight: 300;
