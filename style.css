@@ -231,7 +231,7 @@ footer p {
 /* FOOTER STYLE END */
 
 /* MEDIA QUERY */
-/* @media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) {
   .container {
     margin: 12px 25px;
   }
@@ -414,4 +414,4 @@ footer p {
   footer p {
     font-size: 0.72rem;
   }
-} */
+}
