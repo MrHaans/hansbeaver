@@ -5,6 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* border: 1px red solid; */
 }
 
 body {
@@ -14,11 +15,14 @@ body {
   color: #7fcd91;
   font-weight: 500;
   font-family: "Poppins";
+  overflow: hidden;
 }
 
 .container {
   margin: 12px;
   height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
 }
 /* UNIVERSAL STYLE END */
 
@@ -30,10 +34,9 @@ header {
   justify-content: space-between;
 }
 
-header > a {
-  flex: 0 0 210px;
-  text-decoration: none;
-  color: #7fcd91;
+header img {
+  height: 50px;
+  width: auto;
 }
 
 header h1 {
@@ -196,33 +199,6 @@ nav ul li a {
   margin: 8px 0 0 25px;
   color: #f5eaea;
 }
-
-/* .pagination {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  gap: 5px;
-  font-size: 0.65rem;
-  font-weight: 500;
-  margin-left: 25px;
-  margin-top: 15px;
-  height: 22px;
-}
-
-.pagination a {
-  border: 1px #7FCD91 solid;
-  border-radius: 20px;
-  width: 22px;  
-  text-align: center;
-  text-decoration: none;
-  color: #7FCD91;
-  height: 100%;
-  padding: 3px;
-}
-
-.pagination a:hover {
-  background-color: #5B5656;
-} */
 /* PROJECT STYLE END */
 /* CONTETN STYLE END */
 
@@ -240,6 +216,11 @@ footer p {
 @media screen and (min-width: 480px) {
   .container {
     margin: 12px 25px;
+  }
+
+  header img {
+    height: 70px;
+    width: auto;
   }
 
   nav ul {
@@ -300,6 +281,10 @@ footer p {
     margin: 12px 50px;
   }
 
+  header img {
+    height: 80px;
+  }
+
   nav ul {
     width: 150px;
     display: flex;
@@ -353,6 +338,11 @@ footer p {
 @media screen and (min-width: 1280px) {
   .container {
     margin: 12px 180px;
+  }
+
+  header img {
+    height: 90px;
+    width: auto;
   }
 
   header h1 {
